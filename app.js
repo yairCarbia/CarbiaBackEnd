@@ -41,7 +41,7 @@ class Contenedor {
             const lectura = await fs.promises.readFile(this.archivo, "utf-8");
             const data = await JSON.parse(lectura);
             const busqueda = data.find(item => item.id === id);
-            if (busqueda) { console.log(busqueda); return busqueda;; }
+            if (busqueda) { console.log(busqueda); return busqueda; }
             else { return null }
         }
         catch (error) { console.log(error); }
