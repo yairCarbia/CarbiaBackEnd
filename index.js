@@ -18,5 +18,5 @@ app.get("/productorandom", async (req, res) => {
     const productRandom = await contenedor.getById(randomNumber);
     res.send(productRandom)
 })
-const server = app.listen(PORT, () => { console.log("Server corriendo en " + PORT); });
+const server = app.listen(PORT, () => { console.log("Server corriendo en " + PORT) });
 
