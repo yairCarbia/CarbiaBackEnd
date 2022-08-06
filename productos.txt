@@ -1,0 +1,21 @@
+
+[
+   {
+      "title":"Gaseosa",
+      "price":300,
+      "thumbnail":"gaseosa.png",
+      "id":1
+   },
+   {
+      "title":"Pizza",
+      "price":500,
+      "thumbnail":"pizza.png",
+      "id":2
+   },
+   {
+      "title":"Pastas",
+      "price":600,
+      "thumbnail":"pastas.png",
+      "id":3
+   }
+]
