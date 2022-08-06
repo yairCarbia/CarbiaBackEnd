@@ -9,7 +9,8 @@ const PORT = process.env.PORT || 8080;
 app.get("/productos", async (req, res) => {
     try {
         const productos = await contenedor.getAll();
-        res.send("Realizado por Carbia Yair, Productos: \n" + JSON.parse(productos));
+        const parseProd = await JSON.parse(productos);
+        res.send("Realizado por Carbia Yair, Productos: \n" + parseProd);
     } catch (error) { console.log(error); }
 
 })
@@ -18,5 +19,5 @@ app.get("/productorandom", async (req, res) => {
     const productRandom = await contenedor.getById(randomNumber);
     res.send(productRandom)
 })
-const server = app.listen(PORT, () => { console.log("Server corriendo en " + PORT) });
+const server = app.listen(PORT, () => { console.log("Server corriendo en " + PORT); });
 

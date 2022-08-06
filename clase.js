@@ -31,7 +31,7 @@ class Contenedor {
     async getAll() {
         try {
             const lectura = await fs.promises.readFile(this.archivo, "utf-8");
-            const data = await JSON.parse(lectura);
+            const data = await JSON.stringify(lectura);
             return data;
         } catch (error) { console.log(error); }
     }
