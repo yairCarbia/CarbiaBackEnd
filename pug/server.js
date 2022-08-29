@@ -26,12 +26,12 @@ app.get('/productos', (req, res) => {
 
 });
 const productos = [
-    // {
-    //     "title": "coca",
-    //     "price": "200",
-    //     "thumbnail": "coca",
-    //     id: 1
-    // }
+    {
+        "title": "coca",
+        "price": "200",
+        "thumbnail": "https://cdn0.iconfinder.com/data/icons/beverage-element-pack-1/512/can-packaging-04c-256.png",
+        id: 1
+    }
 ];
 
 app.post('/productos', (req, res) => {

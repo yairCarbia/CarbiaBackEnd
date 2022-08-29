@@ -10,15 +10,19 @@ html
              crossorigin="anonymous"
         )
 
-    body
+    bo  
             br
            
             div(class="d-flex p-2 bd-highlight flex-wrap container")
 
                 if  list.length==0
-                    h2="No hay ningun producto"
+                  div(class="form-control")
+                        h2="No hay ningun producto"
+                        
                 else
+                    
                     each val in list
+                        
                         div(class="card m-2"
                             style="width: 18rem;"
                             )
@@ -27,4 +31,7 @@ html
                                 )
                             div(class="card-body")
                                 h5(class="card-title")=val.title
-                                p(class="card-text")="$"+val.price
+                                p(class="card-text")="$"+val.price     
+                a(class="btn btn-primary m-5 form-control" href="/")="Ir al menu"  
+
+                                        

@@ -29,7 +29,7 @@ const productos = [
     {
         "title": "coca",
         "price": "200",
-        "thumbnail": "coca",
+        "thumbnail": "https://cdn0.iconfinder.com/data/icons/beverage-element-pack-1/512/can-packaging-04c-256.png",
         id: 1
     }
 ];

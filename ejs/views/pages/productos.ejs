@@ -19,15 +19,17 @@
     <div class="container">
         <% if (listaProductos.length==0) { %>
             <h1>No hay mas productos</h1>
+            <a class="btn btn-primary m-3" href="/">Ir al menu</a>
             <% } else { %>
 
 
 
-                <div class="d-flex p-2 bg-dark flex-wrap">
-                    <h1 class="text-light">Productos!</h1>
+                <div class="d-flex p-2  flex-wrap">
+
                     <% listaProductos.forEach((val)=> { %>
                         <div class="card m-2">
-                            <img src=<%=val.thumbnail %> class="card-img-top imagen" style="max-width:18rem">
+                            <img src=<%=val.thumbnail %> class="card-img-top imagen" style="width: 18rem; margin:
+                            1rem;">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <%= val.title %>
@@ -36,7 +38,9 @@
                                 </p>
                             </div>
                         </div>
+                        <a class="btn btn-primary form-control " href="/">Ir al menu</a>
                         <% }); %>
+
                 </div>
                 <% } %>
 

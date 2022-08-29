@@ -17,11 +17,12 @@
     <br>
 
     <div class="container">
-        {{#if listExist}}
-        <div class="d-flex p-2 bd-highlight flex-wrap bg-dark">
-            <h1 class="text-light">Productos!</h1>
+
+        {{#if list.length}}
+        <div class="d-flex p-2 bd-highlight flex-wrap ">
+
             {{#each list}}
-            <div class="card " style="max-width: 18rem; margin: 1rem;">
+            <div class="card m-2 " style="width: 18rem;">
                 <img src="{{thumbnail}}" class="card-img-top" alt="{{thumbnail}}">
                 <div class="card-body">
                     <h5 class="card-title">{{title}}</h5>
@@ -29,10 +30,13 @@
                 </div>
             </div>
             {{/each}}
+            <a class="btn btn-primary m-3 form-control" href="/">Volver al menu</a>
         </div>
+
         {{else}}
-        <div class="d-flex p-2 bd-highlight flex-wrap">
+        <div class="p-2 bd-highlight flex-wrap">
             <h1>No se encontraron elementos</h1>
+            <a class="btn btn-primary m-3" href="/">Volver al menu</a>
         </div>
         {{/if}}
     </div>
