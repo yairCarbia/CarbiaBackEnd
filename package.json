@@ -3,5 +3,24 @@
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
     "socket.io": "^4.5.1"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "backend-cabia",
+  "description": "",
+  "version": "1.0.0",
+  "main": "Contenedor.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yairCarbia/CarbiaBackEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yairCarbia/CarbiaBackEnd/issues"
+  },
+  "homepage": "https://github.com/yairCarbia/CarbiaBackEnd#readme"
 }
