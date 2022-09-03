@@ -65,7 +65,7 @@
         <br>
         <h2 class="text-light ">Chat</h2>
 
-        <form onsubmit="return addMessage(this)" class="mt-5">
+        <form id="#formulario" onsubmit="return addMessage(this)" class="mt-5">
             <div class="form-group">
                 <label for="mail"></label>
                 <input required="required" type="email" class="form-control col-6" id="mail"
@@ -84,6 +84,8 @@
 
                     <div class="col-6" style="padding-top: 23px;">
                         <input type="submit" class="btn btn-primary col-3" value="Enviar!" />
+                        <button class="btn btn-primary" type="submit" onclick="vaciarForm()">Resetear
+                            chat</button>
                     </div>
                 </div>
             </div>

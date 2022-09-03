@@ -1,5 +1,5 @@
 const server = io().connect();
-
+const forulario = document.querySelector("#formulario")
 const render = mensajesChat => {
 	let chat = document.querySelector("#chat");
 	let html = mensajesChat.map(mens => {
@@ -11,7 +11,10 @@ const render = mensajesChat => {
 	});
 	chat.innerHTML = html.join("");
 };
-
+const vaciarForm = () => {
+	document.querySelector("#mail").value = "";
+	document.querySelector("#mensaje").value = "";
+}
 const addMessage = evt => {
 	const mail = document.querySelector("#mail").value;
 	let hora = new Date().toLocaleTimeString();
