@@ -1,0 +1,11 @@
+[
+  {
+    "nombre": "Goma",
+    "precio": "5",
+    "descripcion": "Goma de borrar",
+    "foto": "https://cdn1.iconfinder.com/data/icons/office-171/32/office-04-512.png",
+    "id": 2,
+    "timestamp": "2020-01-01",
+    "stock": "80"
+  }
+]

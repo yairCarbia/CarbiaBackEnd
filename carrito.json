@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2022-08-23T12:00:00.000Z",
+    "productos": [
+      {
+        "id": 1,
+        "timestamp": "2022-08-23T12:00:00.000Z",
+        "nombre": "Producto 1",
+        "descripcion": "un producto 1",
+        "codigo": "Prod1",
+        "foto": "https://media.cnn.com/api/v1/images/stellar/prod/allbirds-sneakers-review-tree-runnerjpg.jpg?c=16x9&q=h_720,w_1280,c_fill",
+        "precio": 100,
+        "stock": 1
+      }
+    ]
+  }
+]
