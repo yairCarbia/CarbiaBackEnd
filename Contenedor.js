@@ -58,7 +58,7 @@ class Contenedor {
 		}
 	}
 
-	// traer producto por id
+
 	async getById(id) {
 		try {
 			const dataArchivo = await this.readFileFunction(this.ruta);
@@ -73,7 +73,7 @@ class Contenedor {
 		}
 	}
 
-	//traer todos los productos
+
 	async getAll() {
 		try {
 			const dataArchivo = await this.readFileFunction(this.ruta);
@@ -88,7 +88,7 @@ class Contenedor {
 			console.log("error de lectura", error);
 		}
 	}
-	// eliminar producto por id
+
 	async deleteById(id) {
 		try {
 			const dataArchivo = await this.readFileFunction(this.ruta);

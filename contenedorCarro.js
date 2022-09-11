@@ -24,7 +24,7 @@ class ContenedorCarro {
 						2
 					)
 				);
-				// ... spread operator -> copia el array y lo agrega al final
+
 			} else {
 				await fs.promises.writeFile(
 					this.ruta,
@@ -37,7 +37,7 @@ class ContenedorCarro {
 		}
 	}
 
-	// actualizar producto por id
+
 	async updateById(id, carrito) {
 		carrito.id = id;
 		try {
@@ -59,7 +59,7 @@ class ContenedorCarro {
 		}
 	}
 
-	// traer producto por id
+
 	async getById(id) {
 		try {
 			const dataArchivo = await this.readFileFunction(this.ruta);
@@ -74,7 +74,7 @@ class ContenedorCarro {
 		}
 	}
 
-	//traer todos los productos
+
 	async getAll() {
 		try {
 			const dataArchivo = await this.readFileFunction(this.ruta);
@@ -90,18 +90,18 @@ class ContenedorCarro {
 		}
 	}
 
-	//añadir producto a carrito
+
 	async addProductToCart(idCart, product) {
 		try {
 			const carritoById = await this.getById(parseInt(idCart));
 			let timestamp = Date.now();
 			if (carritoById.productos.length) {
 				let productToAdd = {
-					id: carritoById.products[carritoById.productos.length - 1].id + 1,
+					id: carritoById.productos[carritoById.productos.length - 1].id + 1,
 					timestamp,
 					...product
 				};
-				carritoById.producto.push(productToAdd);
+				carritoById.productos.push(productToAdd);
 				await this.updateById(parseInt(idCart), carritoById);
 				let idProduct =
 					carritoById.productos[carritoById.productos.length - 1].id;
@@ -120,7 +120,7 @@ class ContenedorCarro {
 		}
 	}
 
-	// eliminar producto por id
+
 	async deleteById(id) {
 		try {
 			let dataArchivo = await this.readFileFunction(this.ruta);

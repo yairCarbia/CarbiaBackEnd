@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require("express");
 const handlebars = require("express-handlebars");
 const { Contenedor } = require("./contenedor");
@@ -110,18 +111,6 @@ routerProductos.get("*", async (req, res) => {
 });
 
 //RUTAS CARRITO
-//agregar un carrito
-routerCarrito.post("/", async (req, res) => {
-	const carrito = new ContenedorCarro("./carrito.json");
-	const idCarrito = await carrito.save(req.body);
-	res.json({ message: "Producto guardado en carrito", idCarrito });
-});
-
-// Eliminar carrito por ID
-routerCarrito.delete("/:id", async (req, res) => {
-	const { id } = req.params;
-	await carrito.deleteById(parseInt(id));
-});
 
 // Obtener carrito por ID
 routerCarrito.get("/:id", async (req, res) => {
@@ -147,24 +136,42 @@ routerCarrito.get("/:id/productos", async (req, res) => {
 	res.json(listaProductos);
 });
 
+
+//agregar un carrito
+routerCarrito.post("/", async (req, res) => {
+	const carrito = new ContenedorCarro("./carrito.json");
+	const idCarrito = await carrito.save(req.body);
+	res.json({ message: "Producto guardado en carrito", idCarrito });
+});
+
 //Agrega un producto al carrito :id
 routerCarrito.post("/:id/productos", async (req, res) => {
 	const { id } = req.params;
 	const objCarrito = req.body;
 	console.log(objCarrito);
 	const contenedor = new ContenedorCarro("./carrito.json");
-	carritoByID = await contenedor.addProductToCart(id, objCarrito);
+	const carritoByID = await contenedor.addProductToCart(id, objCarrito);
 	res.json({ message: "Producto guardado", carritoByID });
+});
+
+// Eliminar carrito por ID
+routerCarrito.delete("/:id", async (req, res) => {
+	const { id } = req.params;
+	const carrito = new ContenedorCarro("./carrito.json");
+	await carrito.deleteById(parseInt(id));
 });
 
 //Elimina un producto del carrito
 routerCarrito.delete("/:idCart/productos/:idProduct", async (req, res) => {
 	const { idCart, idProduct } = req.params;
-	await carrito.deleteProductById(parseInt(idCart), parseInt(idProduct));
+	const carrito = new ContenedorCarro("./carrito.json");
+	const eliminado = await carrito.deleteProductByID(parseInt(idCart), parseInt(idProduct));
+	res.json({ message: "Producto Eliminado", eliminado });
 });
 
 //Erorr 404 de carritos
 routerCarrito.get("*", async (req, res) => {
+
 	res.json({
 		error: -2,
 		description: "Ruta no implementada"
