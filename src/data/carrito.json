@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2022-09-10 T12:00:00.000Z",
+    "productos": [
+      {
+        "id": 1,
+        "timestamp": "2022-09-10 T12:00:00.000Z",
+        "nombre": "Producto 1",
+        "descripcion": "un producto 1",
+        "codigo": "Prod1",
+        "foto": "https://cdn1.iconfinder.com/data/icons/office-icons-17/512/ilustracoes_04-08-256.png",
+        "precio": 100,
+        "stock": 1
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "timestamp": "2022-09-10 T12:00:00.000Z",
+    "productos": []
+  },
+  {
+    "id": 3,
+    "timestamp": "2022-09-10 T12:00:00.000Z",
+    "productos": [
+      {
+        "id": 1,
+        "timestamp": "2022-09-10 T12:00:00.000Z",
+        "nombre": "Producto 1",
+        "descripcion": "un producto 1",
+        "codigo": "Prod1",
+        "foto": "https://cdn1.iconfinder.com/data/icons/office-icons-17/512/ilustracoes_04-08-256.png",
+        "precio": 100,
+        "stock": 4
+      }
+    ]
+  }
+]

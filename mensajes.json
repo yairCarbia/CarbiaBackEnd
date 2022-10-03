@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "mail": "yair@carbia.com",
+    "mensaje": "Hola",
+    "hora": "1:57:42 AM"
+  },
+  {
+    "id": 2,
+    "mail": "anonimo@gmail.com",
+    "mensaje": "Hola Yair",
+    "hora": "1:57:43 AM"
+  },
+  {
+    "id": 3,
+    "mail": "yair2@coder.com",
+    "mensaje": "hola",
+    "hora": "14:21:18"
+  }
+]
