@@ -1,24 +1,29 @@
-require("dotenv").config();
+let productosDao
+let carritosDao
 
-const CarritoDaoArchivo = require("./carrito/CarritoDaoArchivo.js");
-const CarritoDaoFirebase = require("./carrito/CarritoDaoFirebase.js");
-const CarritoDaoMongoDB = require("./carrito/CarritoDaoMongoDB.js");
+switch (process.env.PERS) {
+    case 'json':
+        const { default: ProductosDaoArchivo } = await import('./productos/ProductosDaoArchivo.js')
+        const { default: CarritosDaoArchivo } = await import('./carritos/CarritosDaoArchivo.js')
 
-const ProductoDaoArchivo = require("./productos/ProductoDaoArchivo.js");
-const ProductoDaoMongoDB = require("./productos/ProductoDaoMongoDB.js");
-const ProductoDaoFirebase = require("./productos/ProductoDaoFirebase.js");
+        productosDao = new ProductosDaoArchivo()
+        carritosDao = new CarritosDaoArchivo()
+        break
+    case 'firebase':
+        const { default: ProductosDaoFirebase } = await import('./productos/ProductosDaoFirebase.js')
+        const { default: CarritosDaoFirebase } = await import('./carritos/CarritosDaoFirebase.js')
 
-// export condicional a la variable ENVIROMENT DAO
+        productosDao = new ProductosDaoFirebase()
+        carritosDao = new CarritosDaoFirebase()
+        break
+    case 'mongodb':
+        const { default: ProductosDaoMongoDb } = await import('./productos/ProductosDaoMongoDb.js')
+        const { default: CarritosDaoMongoDb } = await import('./carritos/CarritosDaoMongoDb.js')
 
-if (process.env.DAO === "FS") {
-    exports.Carrito = CarritoDaoArchivo;
-    exports.Producto = ProductoDaoArchivo;
-} else if (process.env.DAO === "MONGO") {
-    exports.Carrito = CarritoDaoMongoDB;
-    exports.Producto = ProductoDaoMongoDB;
-} else if (process.env.DAO === "FB") {
-    exports.Carrito = CarritoDaoFirebase;
-    exports.Producto = ProductoDaoFirebase;
-} else {
-    console.log("Inténtelo de nuevo.");
+        productosDao = new ProductosDaoMongoDb()
+        carritosDao = new CarritosDaoMongoDb()
+        break
+
 }
+
+export { productosDao, carritosDao }

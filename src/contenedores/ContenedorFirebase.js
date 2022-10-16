@@ -1,146 +1,96 @@
-// const admin = require("firebase-admin");
-// const serviceAccount = require("../connect/fir-carbia-firebase-adminsdk-sc0a6-0ebfd1649d.json");
+import admin from "firebase-admin"
+import config from '../config.js'
 
-// admin.initializeApp({
-//     credential: admin.credential.cert(serviceAccount)
-// });
-// const db = admin.firestore();
+admin.initializeApp({
+    credential: admin.credential.cert(config.firebase)
+})
 
-// class ContenedorFirebase {
-//     constructor(coll) {
-//         this.coll = coll;
-//         this.connexion();
-//         this.query = db.collection(coll);
-//     }
+const db = admin.firestore();
 
-//     async connexion() {
-//         console.log("Firestore: base de datos conectada");
-//     }
+class ContenedorFirebase {
 
-//     async save(obj) {
-//         try {
-//             let guardar = await this.query.add(obj);
-//             return guardar.id;
-//         } catch (error) {
-//             console.log(`error al guardar: ${error}`);
-//         } finally {
-//         }
-//     }
-
-//     // traer producto por id
-//     async getById(id) {
-//         try {
-//             let datos = await this.query.doc(id).get();
-//             let newDatos = { ...datos.data(), id: datos.id };
-//             return newDatos;
-//         } catch (error) {
-//             return `No se pudo traer producto ${id}. ${error}`;
-//         } finally {
-//         }
-//     }
-
-//     //traer todos los productos
-//     async getAll() {
-//         try {
-//             let querySnapshot = await this.query.get();
-//             let docs = querySnapshot.docs;
-//             let newDatos = docs.map(doc => ({
-//                 ...doc.data(),
-//                 id: doc.id
-//             }));
-//             return newDatos;
-//         } catch (error) {
-//             console.log(`error al listar: ${error}`);
-//             return [];
-//         } finally {
-//         }
-//     }
-
-//     // eliminar producto por id
-//     async deleteById(id) {
-//         try {
-//             let datos = await this.query.doc(id).delete();
-//             return datos;
-//         } catch (error) {
-//             console.log(`error al eliminar: ${error}`);
-//         } finally {
-//         }
-//     }
-
-//     async updateById(obj) {
-//         try {
-//             await this.query.doc(obj.id).update(obj);
-//             return obj.id;
-//         } catch (error) {
-//             console.log(`error al actualizar: ${error}`);
-//         }
-//     }
-// }
-
-// module.exports = ContenedorFirebase;
-
-
-
-class CarritoDaoFirebase {
-
-
-
-    async save(obj) {
-        try {
-            if (obj.producto && obj.precio && obj.thumbnail) {
-                let carritos = await this.db.add(obj);
-                return carritos
-            } else {
-                return { error: "no tiene elementos" }
-            }
-        } catch (error) {
-            console.warm('hay un error ', error)
-            return { error: error.message }
-        }
+    constructor(nombreColeccion) {
+        this.coleccion = db.collection(nombreColeccion)
     }
-    async getById(id) {
+
+    async listar(id) {
         try {
-            const getall = this.db.doc(id);
-            const doc = await getall.get();
+            const doc = await this.coleccion.doc(id).get();
             if (!doc.exists) {
-                console.log('No such document!');
+                throw new Error(`Error al listar por id: no se encontró`)
             } else {
-                return doc.data();
+                const data = doc.data();
+                return { ...data, id }
             }
         } catch (error) {
-            return { error: error.message }
+            throw new Error(`Error al listar por id: ${error}`)
         }
     }
-    async getAll() {
+
+    async listarAll() {
         try {
-            let querySnapshot = await this.db.get()
-            let data = querySnapshot.docs.map(obj => obj.data())
-            return data;
+            const result = []
+            const snapshot = await this.coleccion.get();
+            snapshot.forEach(doc => {
+                result.push({ id: doc.id, ...doc.data() })
+            })
+            return result
         } catch (error) {
-            return { error: error.message }
+            throw new Error(`Error al listar todo: ${error}`)
         }
     }
-    async updateById(id, obj) {
+
+    async guardar(nuevoElem) {
         try {
-            if (obj.producto && obj.precio && obj.thumbnail) {
-                let carritos = await this.db.doc(id).set(obj);
-                return carritos
-            } else {
-                return { error: "no tiene elementos" }
+            const guardado = await this.coleccion.add(nuevoElem);
+            return { ...nuevoElem, id: guardado.id }
+        } catch (error) {
+            throw new Error(`Error al guardar: ${error}`)
+        }
+    }
+
+    async actualizar(nuevoElem) {
+        try {
+            const actualizado = await this.coleccion.doc(nuevoElem.id).set(nuevoElem);
+            return actualizado
+        } catch (error) {
+            throw new Error(`Error al actualizar: ${error}`)
+        }
+    }
+
+    async borrar(id) {
+        try {
+            const item = await this.coleccion.doc(id).delete();
+            return item
+        } catch (error) {
+            throw new Error(`Error al borrar: ${error}`)
+        }
+    }
+
+    async borrarAll() {
+
+        try {
+            const docs = await this.listarAll()
+            const ids = docs.map(d => d.id)
+            const promesas = ids.map(id => this.borrar(id))
+            const resultados = await Promise.allSettled(promesas)
+            const errores = resultados.filter(r => r.status == 'rejected')
+            if (errores.length > 0) {
+                throw new Error('no se borró todo. volver a intentarlo')
             }
+            // const ref = firestore.collection(path)
+            // ref.onSnapshot((snapshot) => {
+            //     snapshot.docs.forEach((doc) => {
+            //         ref.doc(doc.id).delete()
+            //     })
+            // })
         } catch (error) {
-            console.warm('hay un error ', error)
-            return { error: error.message }
+            throw new Error(`Error al borrar: ${error}`)
         }
     }
-    async deleteById(id) {
-        try {
-            let carritos = await this.db.doc(id).delete();
-            return carritos
-        } catch (error) {
-            return { error: error.message }
-        }
+
+    async desconectar() {
     }
 }
 
-module.exports = CarritoDaoFirebase;
+export default ContenedorFirebase
