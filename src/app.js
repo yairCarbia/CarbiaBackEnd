@@ -1,5 +1,6 @@
 const express = require("express");
 const session = require("express-session");
+const loggerMiddleware = require("./middlewares/loggerMiddleware")
 const expbs = require("express-handlebars");
 require("dotenv").config({ path: "./config/.env" });
 const { Server: HttpServer } = require("http");
@@ -31,6 +32,7 @@ app.use(
 );
 
 //Middlewares
+app.use(loggerMiddleware)
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.static("./views/layouts"));
@@ -57,6 +59,7 @@ app.use(passport.session());
 
 /* CHAT */
 const ApiChat = require("./api/apiChat");
+const { url } = require("inspector");
 const apiChat = new ApiChat();
 let messages = [];
 
@@ -89,8 +92,14 @@ app.use((req, res, next) => {
   logger.warn("NONE EXISTING URL");
   res.sendStatus("404");
 });
+app.use((req, res, next) => {
+  logger.info(`La ruta es ${url}`);
+
+});
 
 //Server
-httpServer.listen(process.env.PORT || 8080, () => {
-  console.log("SERVER ON");
+const server = app.listen(process.env.PORT || 8000, () => {
+  logger.info(`🚀 Server started at http://localhost:${8000}`)
 });
+
+server.on('error', (err) => logger.error(err));
