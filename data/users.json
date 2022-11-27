@@ -1,0 +1,68 @@
+[
+    {
+        "username": "pepe@gmail.com",
+        "password": "12345678",
+        "name": "Pepe",
+        "address": "Calle 124",
+        "age": "21",
+        "phone": "+5492341892301",
+        "avatar": "https://drive.google.com/file/d/16HS6_RI0g4sna-I24AM5MZgCFtLPA9Uj/view?usp=sharing",
+        "role": "user",
+        "id": 1
+    },
+    {
+        "username": "yair@coder.com",
+        "password": "12345678",
+        "name": "yair",
+        "address": "coder",
+        "age": "21",
+        "phone": "+5412311321",
+        "avatar": "https://ficcion-sin-limites.fandom.com/es/wiki/Kyojuro_Rengoku",
+        "role": "user",
+        "id": 2
+    },
+    {
+        "username": "yair2@coder.com",
+        "password": "12345678",
+        "name": "yair2",
+        "address": "coder",
+        "age": "21",
+        "phone": "+54132321321",
+        "avatar": "https://kimetsu-no-yaiba.fandom.com/es/wiki/Kyojuro_Rengoku",
+        "role": "user",
+        "id": 3
+    },
+    {
+        "username": "yair3@coder.com",
+        "password": "12345678",
+        "name": "yair3",
+        "address": "coder",
+        "age": "21",
+        "phone": "+541321312",
+        "avatar": "https://ficcion-sin-limites.fandom.com/es/wiki/Kyojuro_Rengoku",
+        "role": "user",
+        "id": 4
+    },
+    {
+        "username": "yair5@coder.com",
+        "password": "12345678",
+        "name": "yair",
+        "address": "coder",
+        "age": "21",
+        "phone": "+541233123",
+        "avatar": "https://ficcion-sin-limites.fandom.com/es/wiki/Kyojuro_Rengoku",
+        "role": "user",
+        "id": 5
+    },
+    {
+        "username": "yair4@coder.com",
+        "password": "12345678",
+        "name": "yair",
+        "address": "coder",
+        "age": "21",
+        "phone": "+541232131",
+        "avatar": "https://ficcion-sin-limites.fandom.com/es/wiki/Kyojuro_Rengoku",
+        "role": "user",
+        "id": 6
+    }
+]
