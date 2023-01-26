@@ -1,0 +1,122 @@
+<html lang='es'>
+
+<head>
+  <title>Página principal</title>
+  <meta charset='UTF-8' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css'
+    integrity='sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l' crossorigin='anonymous' />
+  <link rel='stylesheet' href='/css/styles.css' />
+  <script src='https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js'></script>
+</head>
+
+<body>
+  <!-- En esta sección se encuentra el formulario de ingreso de productos y la vista de estos -->
+  <section id='insert-and-read'>
+    <div class='container mt-2'>
+      <div class='jumbotron'>
+        <h1>Ingresar un producto</h1>
+        <br />
+
+        <form id='addProductForm'>
+          <!-- Campo nombre del producto -->
+          <div class='form-group'>
+            <label for='nombre'>Nombre</label>
+            <input id='inputTitle' class='form-control' type='text' placeholder='Nombre' />
+          </div>
+
+          <!-- Campo precio del producto -->
+          <div class='form-group'>
+            <label for='precio'>Precio</label>
+            <input disabled id='inputPrice' class='form-control' type='number' step='any' placeholder='Precio' />
+          </div>
+
+          <!-- Campo url de la foto del producto -->
+          <div class='form-group'>
+            <label for='foto'>Foto URL</label>
+            <input disabled id='inputThumbnail' class='form-control' type='url' placeholder='URL' />
+          </div>
+          <br />
+          <button disabled id='btnSendProduct' type='submit' class='btn btn-send-product mt-2'>
+            Ingresar
+          </button>
+        </form>
+        <hr />
+
+        <!-- Acá se inserta la lista de productos en caso de que existan -->
+        <div id='product-list'></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- En esta sección se encuentra el formulario de ingreso de mensajes y la vista de estos -->
+  <section id='message-center'>
+    <div class='container mt-2'>
+      <div class='jumbotron'>
+        <h1>Centro de Mensajes</h1>
+        <h2>(Compresión: <span id='compression-info'></span>%)</h2>
+        <br />
+
+        <form class='container mt-2' id='addMessageForm'>
+          <!-- Ingreso de email -->
+          <div class='form-group row'>
+            <input type='email' id='inputEmail' class='form-control' placeholder='Ingresá tu email' />
+          </div>
+
+          <div class='form-group row'>
+            <!-- Ingreso de nombre del usario -->
+            <input type='text' id='inputFirstName' class='form-control col-md-6' placeholder='Ingresá tu nombre' />
+            <!-- Ingreso de apellido del usario -->
+            <input type='text' id='inputLastName' class='form-control col-md-6' placeholder='Ingresá tu apellido' />
+          </div>
+
+          <div class='form-group row'>
+            <!-- Ingreso de edad del usario -->
+            <input type='number' id='inputAge' class='form-control col-md-4' placeholder='Ingresá tu edad' />
+            <!-- Ingreso de nickname del usario -->
+            <input type='text' id='inputNickName' class='form-control col-md-8'
+              placeholder='Ingresá tu nombre de usuario' />
+          </div>
+
+          <!-- Ingreso de url de avatar -->
+          <div class='form-group row'>
+            <input type='url' id='inputUrlAvatar' class='form-control' placeholder='Ingresá url de tu foto o avatar' />
+          </div>
+
+          <hr />
+          <!-- Acá se inserta la lista de mensajes en caso de que existan -->
+          <div id='message-list'></div>
+          <hr />
+
+          <div class='form-group row'>
+            <textarea disabled id='inputMessage' class='form-control' type='text' cols='30' rows='5'
+              placeholder='Mensaje a enviar' required></textarea>
+          </div>
+          <button disabled id='btnSend' type='submit' class='btn btn-send-message mt-2'>
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- JS bootstrap -->
+  <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js'
+    integrity='sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK'
+    crossorigin='anonymous'></script>
+
+  <!-- JS Handlebars -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js'
+    integrity='sha512-RNLkV3d+aLtfcpEyFG8jRbnWHxUqVZozacROI4J2F1sTaDqo1dPQYs01OMi1t1w9Y2FdbSCDSQ2ZVdAC8bzgAg=='
+    crossorigin='anonymous' referrerpolicy='no-referrer'></script>
+
+  <!-- JS to use socketIO inside of index.js -->
+  <script src='./socket.io/socket.io.js'></script>
+
+  <!-- JS client -->
+  <script src='./js/client.js'></script>
+</body>
+
+</html>

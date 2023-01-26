@@ -1,0 +1,94 @@
+body {
+  background-color: #eef4ed;
+}
+
+.jumbotron {
+  background-color: #8da9c4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0b2545;
+}
+
+.center-title {
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  font-style: italic;
+}
+.div-center {
+  text-align: center;
+}
+
+.btn-login-user,
+.btn-send-product,
+.btn-send-message {
+  color: #eef4ed;
+  background-color: #134074;
+  border-color: #134074;
+}
+.btn-logout,
+.btn-back-to-login,
+.btn-back-to-signup,
+.btn-try-again {
+  color: #eef4ed;
+  background-color: #0b2545;
+  border-color: #0b2545;
+}
+
+.table-responsive {
+  border-radius: 5px;
+}
+
+.table tr,
+.table td,
+.table th {
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+hr {
+  background-color: #eef4ed;
+}
+
+b {
+  color: blue;
+}
+
+span {
+  color: brown;
+}
+
+i {
+  color: green;
+}
+
+/* ----------------------------- spinner section ---------------------------- */
+
+.spinner {
+  margin: auto;
+  display: block;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #d1ecf1;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

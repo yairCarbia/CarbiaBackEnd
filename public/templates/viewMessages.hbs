@@ -1,0 +1,14 @@
+{{#if messages.length}}
+  <div class='table-responsive'>
+    {{#each messages}}
+      <div>
+        <b>{{this.email}}</b>
+        [<span>{{this.fyh}}</span>] :
+        <i>{{this.msg}}</i>
+        <img width='50' src={{this.avatar}} alt='Image not found' />
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <h3 class='alert alert-warning mt-2'>{{messages.error}}</h3>
+{{/if}}

@@ -1,0 +1,585 @@
+[2022-12-22T17:25:50.602] [ERROR] Error - Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+    at Sequence._packetToError (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Handshake.ErrorPacket (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+    at Protocol._parsePacket (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (node:events:513:28)
+    at addChunk (node:internal/streams/readable:324:12)
+    at readableAddChunk (node:internal/streams/readable:297:9)
+    at Readable.push (node:internal/streams/readable:234:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23)
+    --------------------
+    at Protocol._enqueue (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/mysql/lib/Connection.js:116:18)
+    at /home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/knex/lib/dialects/mysql/index.js:66:18
+    at new Promise (<anonymous>)
+    at Client_MySQL.acquireRawConnection (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/knex/lib/dialects/mysql/index.js:61:12)
+    at create (/home/alexisvp97/Escritorio/CursoBackend/Desafios/Desafio_20/node_modules/knex/lib/client.js:249:39) {
+  code: 'ER_NOT_SUPPORTED_AUTH_MODE',
+  errno: 1251,
+  sqlMessage: 'Client does not support authentication protocol requested by server; consider upgrading MySQL client',
+  sqlState: '08004',
+  fatal: true
+}
+[2022-12-28T18:27:00.025] [ERROR] Error - [Mongoose(MongoBD)] - Error: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/
+[2022-12-28T21:25:37.174] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:27:50.935] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:28:11.582] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:29:15.228] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:29:45.345] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:31:17.426] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:32:04.209] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:58:56.633] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T21:59:38.123] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/products/6397a13d032e590d96e47528',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/products/6397a13d032e590d96e47528',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T22:00:03.847] [ERROR] Error - {
+  request: {
+    method: 'GET',
+    url: '/api/fake-products',
+    header: {
+      host: 'localhost:8080',
+      connection: 'keep-alive',
+      'cache-control': 'max-age=0',
+      'upgrade-insecure-requests': '1',
+      'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+      'sec-gpc': '1',
+      'accept-language': 'en-GB,en',
+      'sec-fetch-site': 'none',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-user': '?1',
+      'sec-fetch-dest': 'document',
+      'accept-encoding': 'gzip, deflate, br'
+    }
+  },
+  response: {
+    status: 404,
+    message: 'Not Found',
+    header: [Object: null prototype] {}
+  },
+  app: { subdomainOffset: 2, proxy: false, env: 'development' },
+  originalUrl: '/api/fake-products',
+  req: '<original node req>',
+  res: '<original node res>',
+  socket: '<original node socket>'
+}
+[2022-12-28T22:14:31.799] [ERROR] Error - HTTP status:  404  -  Error al insertar: uno o más campos quedaron vacíos.
+[2022-12-28T22:14:31.910] [ERROR] Error - HTTP status:  404  -  Error al listar: no se encontró el producto con el id indicado.
+[2022-12-28T22:14:31.993] [ERROR] Error - HTTP status:  404  -  Error al actualizar: uno o más campos quedaron vacíos.
+[2022-12-28T22:14:32.046] [ERROR] Error - HTTP status:  404  -  Error al actualizar: no se encontró el producto con el id indicado.
+[2022-12-28T22:14:32.156] [ERROR] Error - HTTP status:  404  -  Error al borrar: no se encontró el producto con el id indicado.
+[2022-12-28T22:16:42.034] [ERROR] Error - Cast to ObjectId failed for value "1" (type string) at path "_id" for model "Products"
+[2022-12-28T22:16:58.129] [ERROR] Error - Cast to ObjectId failed for value "hola" (type string) at path "_id" for model "Products"
+[2023-01-25T20:39:00.930] [ERROR] Error - Error [ERR_MODULE_NOT_FOUND]: Cannot find module 'C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\src\persistency\DTO\productDTO.js' imported from C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\src\persistency\DAO\products\mongoDB.js
+    at new NodeError (node:internal/errors:371:5)
+    at finalizeResolution (node:internal/modules/esm/resolve:418:11)
+    at moduleResolve (node:internal/modules/esm/resolve:981:10)
+    at defaultResolve (node:internal/modules/esm/resolve:1078:11)
+    at ESMLoader.resolve (node:internal/modules/esm/loader:530:30)
+    at ESMLoader.getModuleJob (node:internal/modules/esm/loader:251:18)
+    at ModuleWrap.<anonymous> (node:internal/modules/esm/module_job:79:40)
+    at link (node:internal/modules/esm/module_job:78:36) {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+[2023-01-25T20:44:03.859] [ERROR] Error - [Mongoose(MongoBD)] - Error: bad auth : authentication failed
+[2023-01-25T20:44:20.918] [ERROR] Error - [Mongoose(MongoBD)] - Error: bad auth : authentication failed
+[2023-01-25T20:45:53.084] [ERROR] Error - [Mongoose(MongoBD)] - Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.8tomfjh.mongodb.net
+[2023-01-25T20:46:07.906] [ERROR] Error - [Mongoose(MongoBD)] - Error: querySrv ENOTFOUND _mongodb._tcp.cluster0.8tomfjh.mongodb.net
+[2023-01-25T20:47:52.511] [ERROR] Error - No se encontraron mensajes en la base de datos.
+[2023-01-25T20:48:09.516] [ERROR] Error - No se encontraron mensajes en la base de datos.
+[2023-01-25T20:53:36.000] [ERROR] Error - Error: Messages validation failed: fyh: Cast to date failed for value "25/1/2023 20:53:35" (type string) at path "fyh"
+    at ValidationError.inspect (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:780:19)
+    at inspect (node:internal/util/inspect:345:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2165:40)
+    at Object.format (node:internal/util/inspect:2019:10)
+    at basicLayout (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\log4js.js:42:21)
+    at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\clustering.js:25:28
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\clustering.js:25:13)
+    at Object.send (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\clustering.js:91:7)
+    at Logger._log (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\logger.js:195:16)
+    at Logger.log (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\log4js\lib\logger.js:155:12) {
+  errors: {
+    fyh: CastError: Cast to date failed for value "25/1/2023 20:53:35" (type string) at path "fyh"
+        at SchemaDate.cast (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\schema\date.js:354:11)
+        at SchemaDate.SchemaType.applySetters (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\document.js:1421:22)
+        at model.$set (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\document.js:1146:16)
+        at model.Document (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:121:12)
+        at new model (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:5048:15)
+        at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:3196:22
+        at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:3231:7
+        at Array.forEach (<anonymous>)
+        at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:3230:15
+        at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+        at Mongoose._promiseOrCallback (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\index.js:1272:10)
+        at Function.create (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:3161:23) {
+      stringValue: '"25/1/2023 20:53:35"',
+      messageFormat: undefined,
+      kind: 'date',
+      value: '25/1/2023 20:53:35',
+      path: 'fyh',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(false)
+      
+          at castDate (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\cast\date.js:40:10)
+          at SchemaDate.cast (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\schema\date.js:352:12)
+          at SchemaDate.SchemaType.applySetters (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\document.js:1421:22)
+          at model.$set (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\document.js:1146:16)
+          at model.Document (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:121:12)
+          at new model (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:5048:15)
+          at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:3196:22
+          at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:3231:7
+          at Array.forEach (<anonymous>)
+          at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\model.js:3230:15
+          at C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+          at new Promise (<anonymous>)
+          at promiseOrCallback (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+          at Mongoose._promiseOrCallback (C:\Users\agust\Desktop\Backend_Coderhouse-main (1)\Backend_Coderhouse-main\Desafio_20\node_modules\mongoose\lib\index.js:1272:10) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'Messages validation failed'
+}
+[2023-01-25T20:58:19.056] [ERROR] Error - No se encontraron mensajes en la base de datos.
+[2023-01-25T21:00:14.513] [ERROR] Error - Error: Error al listar: no hay productos cargados en el sistema.
+    at ProductsDAOMongoDB.readProducts (file:///C:/Users/agust/Desktop/Backend_Coderhouse-main%20(1)/Backend_Coderhouse-main/Desafio_20/src/persistency/DAO/products/mongoDB.js:34:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async default (file:///C:/Users/agust/Desktop/Backend_Coderhouse-main%20(1)/Backend_Coderhouse-main/Desafio_20/src/controllers/sockets/products.socket.js:20:34)
+[2023-01-25T21:01:36.470] [ERROR] Error - Error: Error al listar: no hay productos cargados en el sistema.
+    at ProductsDAOMongoDB.readProducts (file:///C:/Users/agust/Desktop/Backend_Coderhouse-main%20(1)/Backend_Coderhouse-main/Desafio_20/src/persistency/DAO/products/mongoDB.js:34:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async default (file:///C:/Users/agust/Desktop/Backend_Coderhouse-main%20(1)/Backend_Coderhouse-main/Desafio_20/src/controllers/sockets/products.socket.js:20:34)
+[2023-01-25T21:11:05.276] [ERROR] Error - Error: Messages validation failed: fyh: Cast to date failed for value "25/1/2023 21:11:05" (type string) at path "fyh"
+    at ValidationError.inspect (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:780:19)
+    at inspect (node:internal/util/inspect:345:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2165:40)
+    at Object.format (node:internal/util/inspect:2019:10)
+    at basicLayout (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\log4js.js:42:21)
+    at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\clustering.js:25:28
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\clustering.js:25:13)
+    at Object.send (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\clustering.js:91:7)
+    at Logger._log (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\logger.js:195:16)
+    at Logger.log (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\logger.js:155:12) {
+  errors: {
+    fyh: CastError: Cast to date failed for value "25/1/2023 21:11:05" (type string) at path "fyh"
+        at SchemaDate.cast (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schema\date.js:354:11)
+        at SchemaDate.SchemaType.applySetters (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1421:22)
+        at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1146:16)
+        at model.Document (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:121:12)
+        at new model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:5048:15)
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3196:22
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3231:7
+        at Array.forEach (<anonymous>)
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3230:15
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+        at Mongoose._promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\index.js:1272:10)
+        at Function.create (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3161:23) {
+      stringValue: '"25/1/2023 21:11:05"',
+      messageFormat: undefined,
+      kind: 'date',
+      value: '25/1/2023 21:11:05',
+      path: 'fyh',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(false)
+      
+          at castDate (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\cast\date.js:40:10)
+          at SchemaDate.cast (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schema\date.js:352:12)
+          at SchemaDate.SchemaType.applySetters (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1421:22)
+          at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1146:16)
+          at model.Document (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:121:12)
+          at new model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:5048:15)
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3196:22
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3231:7
+          at Array.forEach (<anonymous>)
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3230:15
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+          at new Promise (<anonymous>)
+          at promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+          at Mongoose._promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\index.js:1272:10) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'Messages validation failed'
+}
+[2023-01-25T21:15:01.145] [ERROR] Error - Error: Messages validation failed: fyh: Cast to date failed for value "25/1/2023 21:15:01" (type string) at path "fyh"
+    at ValidationError.inspect (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\error\validation.js:50:26)
+    at formatValue (node:internal/util/inspect:780:19)
+    at inspect (node:internal/util/inspect:345:10)
+    at formatWithOptionsInternal (node:internal/util/inspect:2165:40)
+    at Object.format (node:internal/util/inspect:2019:10)
+    at basicLayout (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\layouts.js:65:52)
+    at app (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\appenders\file.js:98:23)
+    at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\log4js.js:43:5
+    at Array.forEach (<anonymous>)
+    at sendLogEventToAppender (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\log4js.js:42:21)
+    at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\clustering.js:25:28
+    at Array.forEach (<anonymous>)
+    at sendToListeners (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\clustering.js:25:13)
+    at Object.send (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\clustering.js:91:7)
+    at Logger._log (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\logger.js:195:16)
+    at Logger.log (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\log4js\lib\logger.js:155:12) {
+  errors: {
+    fyh: CastError: Cast to date failed for value "25/1/2023 21:15:01" (type string) at path "fyh"
+        at SchemaDate.cast (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schema\date.js:354:11)
+        at SchemaDate.SchemaType.applySetters (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schematype.js:1201:12)
+        at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1421:22)
+        at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1146:16)
+        at model.Document (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:166:12)
+        at model.Model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:121:12)
+        at new model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:5048:15)
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3196:22
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3231:7
+        at Array.forEach (<anonymous>)
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3230:15
+        at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+        at new Promise (<anonymous>)
+        at promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+        at Mongoose._promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\index.js:1272:10)
+        at Function.create (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3161:23) {
+      stringValue: '"25/1/2023 21:15:01"',
+      messageFormat: undefined,
+      kind: 'date',
+      value: '25/1/2023 21:15:01',
+      path: 'fyh',
+      reason: AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+      
+        assert.ok(false)
+      
+          at castDate (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\cast\date.js:40:10)
+          at SchemaDate.cast (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schema\date.js:352:12)
+          at SchemaDate.SchemaType.applySetters (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\schematype.js:1201:12)
+          at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1421:22)
+          at model.$set (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:1146:16)
+          at model.Document (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\document.js:166:12)
+          at model.Model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:121:12)
+          at new model (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:5048:15)
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3196:22
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3231:7
+          at Array.forEach (<anonymous>)
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\model.js:3230:15
+          at C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:41:5
+          at new Promise (<anonymous>)
+          at promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\helpers\promiseOrCallback.js:40:10)
+          at Mongoose._promiseOrCallback (C:\Users\agust\Desktop\BackEnd Cabia\node_modules\mongoose\lib\index.js:1272:10) {
+        generatedMessage: true,
+        code: 'ERR_ASSERTION',
+        actual: false,
+        expected: true,
+        operator: '=='
+      },
+      valueType: 'string'
+    }
+  },
+  _message: 'Messages validation failed'
+}
