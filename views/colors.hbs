@@ -1,0 +1,31 @@
+<html lang='es'>
+  <head>
+    <title>Colors</title>
+    <style>
+      h1, h2, h3, h4, h5, h6 { color: #ffffff; }
+    </style>
+  </head>
+  <body>
+    <h2>Ingreso de colores</h2>
+    <form action='/colors' method='POST'>
+      <label style="color: #ffffff;">Inserta un color en inglés</label>
+      <br/>
+      <input type='text'  name='color' placeholder='Ejemplo: red' />
+      <button type='submit'>Añadir</button>
+    </form>
+
+    <ul>
+      {{#if colors}}
+        {{#each colors}}
+          <li>
+            <div style=color:{{this}}>
+              <i>{{this}}</i>
+            </div>
+          </li>
+        {{/each}}
+      {{else}}
+        <h3>No hay colores en la lista</h3>
+      {{/if}}
+    </ul>
+  </body>
+</html>
